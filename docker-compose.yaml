@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: greenlight
+      POSTGRES_USER: greenlight
+      POSTGRES_PASSWORD: greenlight
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+# https://www.geeksforgeeks.org/postgresql-psql-commands/
+
+# docker exec -it postgres psql -d greenlight -U greenlight
+
+# CREATE ROLE greenlight WITH LOGIN PASSWORD 'pa55word';
+# CREATE EXTENSION IF NOT EXISTS citext;
