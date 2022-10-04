@@ -28,3 +28,11 @@ services:
 # Optimizing Postgres https://www.enterprisedb.com/postgres-tutorials/how-tune-postgresql-memory
 # And https://pgtune.leopard.in.ua/
 # SHOW config_file;
+
+# export GREENLIGHT_DB_DSN=postgres://greenlight:greenlight@localhost/greenlight?sslmode=disable
+# migrate -path=./migrations -database=$GREENLIGHT_DB_DSN up
+# migrate -path=./migrations -database=$GREENLIGHT_DB_DSN version
+# migrate -path=./migrations -database=$GREENLIGHT_DB_DSN goto 1
+# migrate -path=./migrations -database =$GREENLIGHT_DB_DSN down
+# migrate -path=./migrations -database =$GREENLIGHT_DB_DSN down 1
+# migrate -path=./migrations -database=$EXAMPLE_DSN force 1
